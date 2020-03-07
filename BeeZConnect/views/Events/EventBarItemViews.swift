@@ -33,6 +33,7 @@ class EventBarItemViews: UIView {
     }
     
     fileprivate func setupHorizentalBar() {
+        
         let horizentalBarView = UIView()
         addSubview(horizentalBarView)
         horizentalBarView.translatesAutoresizingMaskIntoConstraints = false

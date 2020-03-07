@@ -13,6 +13,10 @@
 		8B0FCB48241307EB005D862E /* ArtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FCB47241307EB005D862E /* ArtCell.swift */; };
 		8B0FCB4A2413081B005D862E /* TheatreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FCB492413081B005D862E /* TheatreCell.swift */; };
 		8B0FCB4C24130851005D862E /* FamilyEventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FCB4B24130851005D862E /* FamilyEventsCell.swift */; };
+		8B1532BF2413F91400112AEA /* MeBarItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1532BE2413F91400112AEA /* MeBarItemsView.swift */; };
+		8B1532C1241423BF00112AEA /* MeSelectiveItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1532C0241423BF00112AEA /* MeSelectiveItemView.swift */; };
+		8B1532C324142E6E00112AEA /* MeSelectiveSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1532C224142E6E00112AEA /* MeSelectiveSection.swift */; };
+		8B1532C62414316A00112AEA /* MeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1532C52414316A00112AEA /* MeCollectionCell.swift */; };
 		8B5771192411D3FF005EA86D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5771182411D3FF005EA86D /* AppDelegate.swift */; };
 		8B57711B2411D3FF005EA86D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B57711A2411D3FF005EA86D /* SceneDelegate.swift */; };
 		8B5771202411D3FF005EA86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B57711E2411D3FF005EA86D /* Main.storyboard */; };
@@ -22,7 +26,7 @@
 		8B5771302411E259005EA86D /* ClassfieldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B57712F2411E259005EA86D /* ClassfieldsController.swift */; };
 		8B6061662411EB3F0055D4EE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061652411EB3F0055D4EE /* TabBarController.swift */; };
 		8B6061682411EDBB0055D4EE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061672411EDBB0055D4EE /* HomeController.swift */; };
-		8B60616A2411F0AF0055D4EE /* LawyersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061692411F0AF0055D4EE /* LawyersController.swift */; };
+		8B60616A2411F0AF0055D4EE /* MeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061692411F0AF0055D4EE /* MeController.swift */; };
 		8BB2FB0224130464001CEA00 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2FB0124130464001CEA00 /* BaseCell.swift */; };
 		8BC7D9FF2412DAC50025D2A5 /* EeventItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7D9FE2412DAC50025D2A5 /* EeventItemsCell.swift */; };
 		8BC7DA022412F3BE0025D2A5 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7DA012412F3BE0025D2A5 /* FeedCell.swift */; };
@@ -35,6 +39,10 @@
 		8B0FCB47241307EB005D862E /* ArtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCell.swift; sourceTree = "<group>"; };
 		8B0FCB492413081B005D862E /* TheatreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreCell.swift; sourceTree = "<group>"; };
 		8B0FCB4B24130851005D862E /* FamilyEventsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyEventsCell.swift; sourceTree = "<group>"; };
+		8B1532BE2413F91400112AEA /* MeBarItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeBarItemsView.swift; sourceTree = "<group>"; };
+		8B1532C0241423BF00112AEA /* MeSelectiveItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeSelectiveItemView.swift; sourceTree = "<group>"; };
+		8B1532C224142E6E00112AEA /* MeSelectiveSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeSelectiveSection.swift; sourceTree = "<group>"; };
+		8B1532C52414316A00112AEA /* MeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCollectionCell.swift; sourceTree = "<group>"; };
 		8B5771152411D3FF005EA86D /* BeeZConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeZConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5771182411D3FF005EA86D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B57711A2411D3FF005EA86D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +54,7 @@
 		8B57712F2411E259005EA86D /* ClassfieldsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassfieldsController.swift; sourceTree = "<group>"; };
 		8B6061652411EB3F0055D4EE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8B6061672411EDBB0055D4EE /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		8B6061692411F0AF0055D4EE /* LawyersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawyersController.swift; sourceTree = "<group>"; };
+		8B6061692411F0AF0055D4EE /* MeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeController.swift; sourceTree = "<group>"; };
 		8BB2FB0124130464001CEA00 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		8BC7D9FE2412DAC50025D2A5 /* EeventItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EeventItemsCell.swift; sourceTree = "<group>"; };
 		8BC7DA012412F3BE0025D2A5 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -67,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				8B0B7E0D241200C300AD8FF9 /* ClassfieldsSections.swift */,
+				8B1532C224142E6E00112AEA /* MeSelectiveSection.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -74,10 +83,29 @@
 		8B0B7E0F2412019D00AD8FF9 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				8B1532C42414313F00112AEA /* New Group */,
 				8BC7DA012412F3BE0025D2A5 /* FeedCell.swift */,
 				8BC7DA002412F39C0025D2A5 /* Events */,
+				8B1BFDDB24134A1C0018F525 /* me */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		8B1532C42414313F00112AEA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		8B1BFDDB24134A1C0018F525 /* me */ = {
+			isa = PBXGroup;
+			children = (
+				8B1532BE2413F91400112AEA /* MeBarItemsView.swift */,
+				8B1532C0241423BF00112AEA /* MeSelectiveItemView.swift */,
+				8B1532C52414316A00112AEA /* MeCollectionCell.swift */,
+			);
+			path = me;
 			sourceTree = "<group>";
 		};
 		8B57710C2411D3FF005EA86D = {
@@ -120,7 +148,7 @@
 			children = (
 				8B57712F2411E259005EA86D /* ClassfieldsController.swift */,
 				8B6061672411EDBB0055D4EE /* HomeController.swift */,
-				8B6061692411F0AF0055D4EE /* LawyersController.swift */,
+				8BE07F442413498A000391A1 /* Me */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -152,6 +180,14 @@
 				8BB2FB002413042E001CEA00 /* EventItems */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		8BE07F442413498A000391A1 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				8B6061692411F0AF0055D4EE /* MeController.swift */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,16 +264,20 @@
 				8B5771232411D3FF005EA86D /* BeeZConnect.xcdatamodeld in Sources */,
 				8B0FCB48241307EB005D862E /* ArtCell.swift in Sources */,
 				8B5771192411D3FF005EA86D /* AppDelegate.swift in Sources */,
-				8B60616A2411F0AF0055D4EE /* LawyersController.swift in Sources */,
+				8B60616A2411F0AF0055D4EE /* MeController.swift in Sources */,
+				8B1532BF2413F91400112AEA /* MeBarItemsView.swift in Sources */,
 				8B0FCB4C24130851005D862E /* FamilyEventsCell.swift in Sources */,
 				8B57711B2411D3FF005EA86D /* SceneDelegate.swift in Sources */,
+				8B1532C62414316A00112AEA /* MeCollectionCell.swift in Sources */,
 				8B0FCB46241307BB005D862E /* ConcertCell.swift in Sources */,
 				8BC7DA022412F3BE0025D2A5 /* FeedCell.swift in Sources */,
 				8B0FCB4A2413081B005D862E /* TheatreCell.swift in Sources */,
 				8B6061682411EDBB0055D4EE /* HomeController.swift in Sources */,
 				8BB2FB0224130464001CEA00 /* BaseCell.swift in Sources */,
 				8B6061662411EB3F0055D4EE /* TabBarController.swift in Sources */,
+				8B1532C324142E6E00112AEA /* MeSelectiveSection.swift in Sources */,
 				8B5771302411E259005EA86D /* ClassfieldsController.swift in Sources */,
+				8B1532C1241423BF00112AEA /* MeSelectiveItemView.swift in Sources */,
 				8BC7D9FF2412DAC50025D2A5 /* EeventItemsCell.swift in Sources */,
 				8B0B7E11241201C500AD8FF9 /* EventBarItemViews.swift in Sources */,
 				8B0B7E0E241200C300AD8FF9 /* ClassfieldsSections.swift in Sources */,

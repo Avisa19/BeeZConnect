@@ -12,9 +12,9 @@ class TabBarController: UITabBarController {
        
         
         viewControllers = [
-            createNavController(viewController: HomeController(), selectedImage: #imageLiteral(resourceName: "icons8-musicbee_filled"), image: #imageLiteral(resourceName: "icons8-musicbee"), title: "Home"),
-            createNavController(viewController: ClassfieldsController(), selectedImage: #imageLiteral(resourceName: "icons8-no_drugs_filled"), image: #imageLiteral(resourceName: "icons8-no_drugs"), title: "Classfields"),
-            createNavController(viewController: LawyersController(), selectedImage: #imageLiteral(resourceName: "icons8-beer_keg_filled"), image: #imageLiteral(resourceName: "icons8-beer_keg"), title: "Me"),
+            createNavController(viewController: HomeController(), selectedImage: #imageLiteral(resourceName: "icons8-musicbee_filled"), image: #imageLiteral(resourceName: "icons8-musicbee"), title: "Home", largTitle: true),
+            createNavController(viewController: ClassfieldsController(), selectedImage: #imageLiteral(resourceName: "icons8-no_drugs_filled"), image: #imageLiteral(resourceName: "icons8-no_drugs"), title: "Classfields", largTitle: true),
+            createNavController(viewController: MeController(), selectedImage: #imageLiteral(resourceName: "icons8-bee_filled"), image: #imageLiteral(resourceName: "icons8-bee"), title: "Me", largTitle: true),
         ]
     }
     
@@ -24,12 +24,13 @@ class TabBarController: UITabBarController {
 extension TabBarController {
     
     // create a template for adding VC into tabBar menu Items
-    fileprivate func createNavController(viewController: UIViewController, selectedImage: UIImage, image: UIImage, title: String) -> UIViewController {
+    fileprivate func createNavController(viewController: UIViewController, selectedImage: UIImage, image: UIImage, title: String, largTitle: Bool) -> UIViewController {
         let navController = UINavigationController(rootViewController: viewController)
         viewController.navigationItem.title = title
-        navController.navigationBar.prefersLargeTitles = true
+        navController.navigationBar.prefersLargeTitles = largTitle
         navController.tabBarItem.title = title
         navController.tabBarItem.image = image
+        navController.navigationBar.barTintColor = #colorLiteral(red: 0.8436784148, green: 0.605225265, blue: 0.2231641114, alpha: 1)
         navController.tabBarItem.selectedImage = selectedImage
         return navController
     }
