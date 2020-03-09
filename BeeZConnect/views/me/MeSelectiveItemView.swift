@@ -11,6 +11,7 @@ class MeSelectiveItemView: UIView {
         IconImage(image: #imageLiteral(resourceName: "icons8-bookmark_ribbon").withRenderingMode(.alwaysTemplate))
     ]
     var horizentalBarleftConstraint: NSLayoutConstraint?
+    var meController: MeController?
     
     lazy var meCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -59,6 +60,7 @@ class MeSelectiveItemView: UIView {
         meCollectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .bottom)
     }
     
+    
     fileprivate func setupHorizentalBar() {
         let horizentalBar = UIView()
         horizentalBar.backgroundColor = #colorLiteral(red: 0.4269747436, green: 0.2723884881, blue: 0.08990689367, alpha: 1)
@@ -91,12 +93,13 @@ extension MeSelectiveItemView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let x: CGFloat = CGFloat(indexPath.item) * frame.width / 3
-        horizentalBarleftConstraint?.constant = x
-        
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-            self.layoutIfNeeded()
-        })
+//        let x: CGFloat = CGFloat(indexPath.item) * frame.width / 3
+//        horizentalBarleftConstraint?.constant = x
+//
+//        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+//            self.layoutIfNeeded()
+//        })
+        self.meController?.scrollToMeCollection(indexPath.item)
     }
 }
 

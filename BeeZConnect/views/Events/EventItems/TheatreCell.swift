@@ -2,7 +2,7 @@
 
 import UIKit
 
-class TheatreCell: BaseCell {
+class TheatreCell: BZBaseCell {
     
     override func setupViews() {
         super.setupViews()

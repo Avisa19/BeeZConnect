@@ -3,7 +3,7 @@
 import UIKit
 
 
-class FamilyEventsCell: BaseCell {
+class FamilyEventsCell: BZBaseCell {
     
     override func setupViews() {
         super.setupViews()

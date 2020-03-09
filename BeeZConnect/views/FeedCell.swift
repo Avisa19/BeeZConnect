@@ -2,7 +2,7 @@
 import UIKit
 
 
-class FeedCell: BaseCell {
+class FeedCell: BZBaseCell {
     
     override func setupViews() {
         super.setupViews()

@@ -2,7 +2,7 @@
 
 import UIKit
 
-class ConcertCell: BaseCell {
+class ConcertCell: BZBaseCell {
     
     override func setupViews() {
         super.setupViews()

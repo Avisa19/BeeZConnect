@@ -2,7 +2,7 @@
 import UIKit
 
 
-class ArtCell: BaseCell {
+class ArtCell: BZBaseCell {
     
     override func setupViews() {
         super.setupViews()

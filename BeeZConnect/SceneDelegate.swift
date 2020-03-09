@@ -9,22 +9,43 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
-
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
+        
+        let bg = BZWelcomeScreenView()
+        guard let window = window else { return }
+        bg.translatesAutoresizingMaskIntoConstraints = false
+        window.addSubview(bg)
+        
+        bg.topAnchor.constraint(equalTo: window.topAnchor).isActive = true
+        bg.leadingAnchor.constraint(equalTo: window.leadingAnchor).isActive = true
+        bg.trailingAnchor.constraint(equalTo: window.trailingAnchor).isActive = true
+        bg.bottomAnchor.constraint(equalTo: window.bottomAnchor).isActive = true
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4) {
+            self.setupMainScreen()
+            bg.removeFromSuperview()
+        }
+        
+    }
+    
+    func setupMainScreen() {
+        
         let tabBarVc = TabBarController()
         tabBarVc.tabBar.barTintColor = #colorLiteral(red: 0.8549915552, green: 0.6130863428, blue: 0.226591289, alpha: 1)
         tabBarVc.tabBar.tintColor = .black
         window?.rootViewController = tabBarVc
         window?.makeKeyAndVisible()
+        
     }
-
+    
     func sceneDidDisconnect(_ scene: UIScene) {
     }
 

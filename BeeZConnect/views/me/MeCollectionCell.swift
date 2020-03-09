@@ -3,7 +3,7 @@
 import UIKit
 
 
-class MeCollectionCell: UICollectionViewCell {
+class MeCollectionCell: BZBaseCell {
     
     var title: String? {
         didSet {
@@ -29,7 +29,7 @@ class MeCollectionCell: UICollectionViewCell {
     }()
     
     fileprivate let iconImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.tintColor = #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1)
@@ -51,18 +51,16 @@ class MeCollectionCell: UICollectionViewCell {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func setupViews() {
+        super.setupViews()
         
         setupUI()
-        
     }
     
-    
     fileprivate func setupUI() {
-        contentView.backgroundColor = #colorLiteral(red: 0.8477998772, green: 0.8583888591, blue: 0.866802117, alpha: 1)
         
-        
+        contentView.backgroundColor = #colorLiteral(red: 0.928184092, green: 0.7959498763, blue: 0.2721357346, alpha: 1)
+        backgroundColor = #colorLiteral(red: 0.928184092, green: 0.7959498763, blue: 0.2721357346, alpha: 1)
         iconImageView.widthAnchor.constraint(equalToConstant: 15).isActive = true
         iconImageView.heightAnchor.constraint(equalToConstant: 15).isActive = true
         
@@ -78,10 +76,6 @@ class MeCollectionCell: UICollectionViewCell {
         stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
         
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {

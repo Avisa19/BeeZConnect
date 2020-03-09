@@ -21,6 +21,8 @@ class MeBarItemsView: UIView {
     
     fileprivate lazy var googleButton = createButton(image: #imageLiteral(resourceName: "icons8-google_plus_filled"), selector: #selector(handleGoogleLogin))
     
+    fileprivate lazy var settingButton = createButton(image: #imageLiteral(resourceName: "icons8-frisbee_disk"), selector: #selector(handleSetting))
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -43,6 +45,13 @@ class MeBarItemsView: UIView {
         stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0).isActive = true
         stackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         stackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        addSubview(settingButton)
+        settingButton.translatesAutoresizingMaskIntoConstraints = false
+        settingButton.topAnchor.constraint(equalTo: topAnchor, constant: 25).isActive = true
+        settingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
+        settingButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
+        settingButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
     }
     
     required init?(coder: NSCoder) {
@@ -62,6 +71,10 @@ extension MeBarItemsView {
     
     @objc fileprivate func handleFacebookLogin() {
         print("handle login...")
+    }
+    
+    @objc fileprivate func handleSetting() {
+        print("handle setting...")
     }
 }
 

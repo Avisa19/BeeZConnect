@@ -2,7 +2,7 @@
 
 import UIKit
 
-class EventItemsCell: BaseCell {
+class EventItemsCell: BZBaseCell {
     
     var text: String? {
         didSet {

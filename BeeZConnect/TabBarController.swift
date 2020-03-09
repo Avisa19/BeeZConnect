@@ -13,7 +13,7 @@ class TabBarController: UITabBarController {
         
         viewControllers = [
             createNavController(viewController: HomeController(), selectedImage: #imageLiteral(resourceName: "icons8-musicbee_filled"), image: #imageLiteral(resourceName: "icons8-musicbee"), title: "Home", largTitle: true),
-            createNavController(viewController: ClassfieldsController(), selectedImage: #imageLiteral(resourceName: "icons8-no_drugs_filled"), image: #imageLiteral(resourceName: "icons8-no_drugs"), title: "Classfields", largTitle: true),
+            createNavController(viewController: ClassfieldsController(), selectedImage: #imageLiteral(resourceName: "icons8-no_drugs_filled"), image: #imageLiteral(resourceName: "icons8-no_drugs"), title: "Classifields", largTitle: true),
             createNavController(viewController: MeController(), selectedImage: #imageLiteral(resourceName: "icons8-bee_filled"), image: #imageLiteral(resourceName: "icons8-bee"), title: "Me", largTitle: true),
         ]
     }
