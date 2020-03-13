@@ -11,14 +11,7 @@ class EventItemsCell: BZBaseCell {
         }
     }
     
-    fileprivate let textLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.textColor = #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1)
-        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    fileprivate let textLabel = BZLabel(textAlign: .center, size: 8)
     
     override func setupViews() {
         super.setupViews()

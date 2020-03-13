@@ -11,22 +11,11 @@ class ClassfieldsController: UIViewController {
     
     lazy var eventBarItemsView: EventBarItemViews = {
         let view = EventBarItemViews()
-        view.translatesAutoresizingMaskIntoConstraints = false
         view.eventsController = self
         return view
     }()
     
-    fileprivate lazy var eventsCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        layout.scrollDirection = .horizontal
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collection.translatesAutoresizingMaskIntoConstraints = false
-        collection.dataSource = self
-        collection.delegate = self
-        return collection
-    }()
+    fileprivate lazy var eventsCollectionView = BZCollectionView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +54,8 @@ class ClassfieldsController: UIViewController {
         eventsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         eventsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         eventsCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        eventsCollectionView.dataSource = self
+        eventsCollectionView.delegate = self
         
         // register Cells
         eventsCollectionView.register(FeedCell.self, forCellWithReuseIdentifier: FEED_ID)

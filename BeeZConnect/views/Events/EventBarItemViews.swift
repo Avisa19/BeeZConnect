@@ -8,22 +8,14 @@ class EventBarItemViews: UIView {
     var leftHorizentalBarView: NSLayoutConstraint!
     var eventsController: ClassfieldsController?
     
-    lazy var eventsItemCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        layout.scrollDirection = .horizontal
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collection.translatesAutoresizingMaskIntoConstraints = false
-        collection.dataSource = self
-        collection.delegate = self
-        return collection
-    }()
+    lazy var eventsItemCollectionView = BZCollectionView()
     
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        if frame == .zero {
+            self.translatesAutoresizingMaskIntoConstraints = false
+        }
         setupEventBarItems()
         setupHorizentalBar()
     }
@@ -57,7 +49,8 @@ class EventBarItemViews: UIView {
         eventsItemCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         eventsItemCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         eventsItemCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        
+        eventsItemCollectionView.dataSource = self
+        eventsItemCollectionView.delegate = self
         eventsItemCollectionView.register(EventItemsCell.self, forCellWithReuseIdentifier: EVENT_ID)
     }
     

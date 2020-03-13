@@ -13,17 +13,7 @@ class MeSelectiveItemView: UIView {
     var horizentalBarleftConstraint: NSLayoutConstraint?
     var meController: MeController?
     
-    lazy var meCollectionView : UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        layout.scrollDirection = .horizontal
-        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collection.translatesAutoresizingMaskIntoConstraints = false
-        collection.dataSource = self
-        collection.delegate = self
-        return collection
-    }()
+    lazy var meCollectionView = BZCollectionView()
     
     fileprivate let dividerView: UIView = {
         let view = UIView()
@@ -56,6 +46,9 @@ class MeSelectiveItemView: UIView {
         meCollectionView.bottomAnchor.constraint(equalTo: dividerView.topAnchor).isActive = true
         
         meCollectionView.register(MeCollectionCell.self, forCellWithReuseIdentifier: ME_ID)
+        meCollectionView.delegate = self
+        meCollectionView.dataSource = self
+        
         let selectedIndexPath = IndexPath(item: 0, section: 0)
         meCollectionView.selectItem(at: selectedIndexPath, animated: false, scrollPosition: .bottom)
     }

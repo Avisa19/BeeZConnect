@@ -5,23 +5,17 @@ import UIKit
 
 class MeBarItemsView: UIView {
     
-    fileprivate let titleLabel: UILabel = {
-       let label = UILabel()
-        label.text = "Sign in with"
-        label.textColor = #colorLiteral(red: 0.265830934, green: 0.1691296995, blue: 0.04577291757, alpha: 1)
-        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        return label
-    }()
+    var delegate: BZGetItDoneDelegate?
     
-    fileprivate lazy var facebookButton = createButton(image: #imageLiteral(resourceName: "icons8-facebook_new_filled"), selector: #selector(handleFacebookLogin))
+    fileprivate let titleLabel = BZLabel(title: "Sign in with", textColor: UIColor.honeyTextOne, textAlign: .center, size: 14)
     
-    fileprivate lazy var twitterButton = createButton(image: #imageLiteral(resourceName: "icons8-twitter"), selector: #selector(handleTwitterLogin))
+    fileprivate lazy var facebookButton = BZButton(image: #imageLiteral(resourceName: "icons8-facebook_new_filled"))
     
-    fileprivate lazy var googleButton = createButton(image: #imageLiteral(resourceName: "icons8-google_plus_filled"), selector: #selector(handleGoogleLogin))
+    fileprivate lazy var twitterButton = BZButton(image: #imageLiteral(resourceName: "icons8-twitter"))
     
-    fileprivate lazy var settingButton = createButton(image: #imageLiteral(resourceName: "icons8-frisbee_disk"), selector: #selector(handleSetting))
+    fileprivate lazy var googleButton = BZButton(image: #imageLiteral(resourceName: "icons8-google_plus_filled"))
+    
+    fileprivate lazy var settingButton = BZButton(image: #imageLiteral(resourceName: "icons8-frisbee_disk"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,10 +42,15 @@ class MeBarItemsView: UIView {
         
         addSubview(settingButton)
         settingButton.translatesAutoresizingMaskIntoConstraints = false
-        settingButton.topAnchor.constraint(equalTo: topAnchor, constant: 25).isActive = true
+        settingButton.topAnchor.constraint(equalTo: topAnchor, constant: 30).isActive = true
         settingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
         settingButton.widthAnchor.constraint(equalToConstant: 44).isActive = true
         settingButton.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        
+        facebookButton.addTarget(self, action: #selector(handleFacebookLogin), for: .touchUpInside)
+        twitterButton.addTarget(self, action: #selector(handleTwitterLogin), for: .touchUpInside)
+        googleButton.addTarget(self, action: #selector(handleGoogleLogin), for: .touchUpInside)
+        settingButton.addTarget(self, action: #selector(handleSetting), for: .touchUpInside)
     }
     
     required init?(coder: NSCoder) {
@@ -74,16 +73,10 @@ extension MeBarItemsView {
     }
     
     @objc fileprivate func handleSetting() {
-        print("handle setting...")
+        if let delegate = self.delegate {
+            delegate.didAddNewVC()
+        }
     }
 }
 
-extension MeBarItemsView {
-    fileprivate func createButton(image: UIImage, selector: Selector) -> UIButton {
-        let button = UIButton()
-        button.setImage(image, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: selector, for: .touchUpInside)
-        return button
-    }
-}
+

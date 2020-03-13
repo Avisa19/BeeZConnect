@@ -13,7 +13,7 @@ enum ClassfieldsSections: Int, CaseIterable, CustomStringConvertible {
         case .Concerts: return "Concerts"
         case .Arts: return "Arts"
         case .Theatre: return "Theatre"
-        case .FamilyEvents: return "Family Events"
+        case .FamilyEvents: return "Family Eve"
         }
     }
 }

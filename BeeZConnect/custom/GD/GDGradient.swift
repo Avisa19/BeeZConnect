@@ -3,15 +3,22 @@
 import UIKit
 
 
-class BZGradientLayer: UIView {
+class GDGradientView: UIView {
     
-    override init(frame: CGRect) {
+    fileprivate var hexColor = [
+        UIColor.gdOrange.cgColor,
+        UIColor.gdGreen.cgColor
+    ]
+    
+     init(frame: CGRect = .zero, cornerRadius: CGFloat = 4) {
         super.init(frame: frame)
+        checkIfFrameZero()
         
-        self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = #colorLiteral(red: 0.6327777505, green: 0.5805612206, blue: 0.4803093076, alpha: 1)
+        self.layer.cornerRadius = cornerRadius
+        self.clipsToBounds = true
+        
         if let layer = self.layer as? CAGradientLayer {
-            layer.colors = [UIColor.honeyZero.cgColor, UIColor.honeyTextTwo.cgColor]
+            layer.colors = hexColor
             layer.locations = [0.0, 1.2]
         }
         
@@ -21,6 +28,7 @@ class BZGradientLayer: UIView {
     func setupViews() {
         
     }
+    
     
     override class var layerClass: AnyClass {
         return CAGradientLayer.self

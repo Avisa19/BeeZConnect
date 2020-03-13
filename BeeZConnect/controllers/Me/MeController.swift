@@ -8,8 +8,9 @@ class MeController: UIViewController {
     fileprivate let FOLLOW_ID = "FollowID"
     fileprivate let SAVED_ID = "SavedID"
     
-    fileprivate let meBarButtonView: MeBarItemsView = {
+    fileprivate lazy var meBarButtonView: MeBarItemsView = {
         let view = MeBarItemsView()
+        view.delegate = self
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -121,5 +122,12 @@ extension MeController: UICollectionViewDelegateFlowLayout {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         meSelectiveItemView.horizentalBarleftConstraint?.constant = scrollView.contentOffset.x * 1/3
+    }
+}
+
+extension MeController: BZGetItDoneDelegate {
+    func didAddNewVC() {
+        let welcomeVC = WelcomeController()
+        self.present(welcomeVC, animated: true, completion: nil)
     }
 }

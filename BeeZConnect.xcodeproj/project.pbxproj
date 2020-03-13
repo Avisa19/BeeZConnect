@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B03503B241B377900D74895 /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03503A241B377900D74895 /* protocol.swift */; };
+		8B03503E241B394C00D74895 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03503D241B394C00D74895 /* WelcomeController.swift */; };
+		8B035041241B3B1600D74895 /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B035040241B3B1600D74895 /* GDGradient.swift */; };
+		8B035043241B407200D74895 /* GDWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B035042241B407200D74895 /* GDWelcomeView.swift */; };
+		8B035045241B428000D74895 /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B035044241B428000D74895 /* GDLabel.swift */; };
+		8B035047241B4BDF00D74895 /* GDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B035046241B4BDF00D74895 /* GDButton.swift */; };
+		8B035049241B4E1100D74895 /* optionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B035048241B4E1100D74895 /* optionSet.swift */; };
 		8B0B7E0E241200C300AD8FF9 /* ClassfieldsSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B7E0D241200C300AD8FF9 /* ClassfieldsSections.swift */; };
 		8B0B7E11241201C500AD8FF9 /* EventBarItemViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B7E10241201C500AD8FF9 /* EventBarItemViews.swift */; };
 		8B0FCB46241307BB005D862E /* ConcertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FCB45241307BB005D862E /* ConcertCell.swift */; };
@@ -30,15 +37,24 @@
 		8B5771252411D401005EA86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B5771242411D401005EA86D /* Assets.xcassets */; };
 		8B5771282411D401005EA86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B5771262411D401005EA86D /* LaunchScreen.storyboard */; };
 		8B5771302411E259005EA86D /* ClassfieldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B57712F2411E259005EA86D /* ClassfieldsController.swift */; };
+		8B5D28A42416D4FE0076A9CB /* BZCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D28A32416D4FE0076A9CB /* BZCollectionView.swift */; };
 		8B6061662411EB3F0055D4EE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061652411EB3F0055D4EE /* TabBarController.swift */; };
 		8B6061682411EDBB0055D4EE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061672411EDBB0055D4EE /* HomeController.swift */; };
 		8B60616A2411F0AF0055D4EE /* MeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061692411F0AF0055D4EE /* MeController.swift */; };
 		8BB2FB0224130464001CEA00 /* BZBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2FB0124130464001CEA00 /* BZBaseCell.swift */; };
 		8BC7D9FF2412DAC50025D2A5 /* EeventItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7D9FE2412DAC50025D2A5 /* EeventItemsCell.swift */; };
 		8BC7DA022412F3BE0025D2A5 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7DA012412F3BE0025D2A5 /* FeedCell.swift */; };
+		8BDCCB2D2416D11100670995 /* BZButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCCB2C2416D11100670995 /* BZButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B03503A241B377900D74895 /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
+		8B03503D241B394C00D74895 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
+		8B035040241B3B1600D74895 /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
+		8B035042241B407200D74895 /* GDWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDWelcomeView.swift; sourceTree = "<group>"; };
+		8B035044241B428000D74895 /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDLabel.swift; sourceTree = "<group>"; };
+		8B035046241B4BDF00D74895 /* GDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDButton.swift; sourceTree = "<group>"; };
+		8B035048241B4E1100D74895 /* optionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionSet.swift; sourceTree = "<group>"; };
 		8B0B7E0D241200C300AD8FF9 /* ClassfieldsSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassfieldsSections.swift; sourceTree = "<group>"; };
 		8B0B7E10241201C500AD8FF9 /* EventBarItemViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBarItemViews.swift; sourceTree = "<group>"; };
 		8B0FCB45241307BB005D862E /* ConcertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertCell.swift; sourceTree = "<group>"; };
@@ -64,12 +80,14 @@
 		8B5771272411D401005EA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B5771292411D401005EA86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B57712F2411E259005EA86D /* ClassfieldsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassfieldsController.swift; sourceTree = "<group>"; };
+		8B5D28A32416D4FE0076A9CB /* BZCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZCollectionView.swift; sourceTree = "<group>"; };
 		8B6061652411EB3F0055D4EE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8B6061672411EDBB0055D4EE /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8B6061692411F0AF0055D4EE /* MeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeController.swift; sourceTree = "<group>"; };
 		8BB2FB0124130464001CEA00 /* BZBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZBaseCell.swift; sourceTree = "<group>"; };
 		8BC7D9FE2412DAC50025D2A5 /* EeventItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EeventItemsCell.swift; sourceTree = "<group>"; };
 		8BC7DA012412F3BE0025D2A5 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		8BDCCB2C2416D11100670995 /* BZButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B03503C241B38D300D74895 /* getItDone */ = {
+			isa = PBXGroup;
+			children = (
+				8B03503D241B394C00D74895 /* WelcomeController.swift */,
+			);
+			path = getItDone;
+			sourceTree = "<group>";
+		};
+		8B03503F241B3AF600D74895 /* GD */ = {
+			isa = PBXGroup;
+			children = (
+				8B035040241B3B1600D74895 /* GDGradient.swift */,
+				8B035042241B407200D74895 /* GDWelcomeView.swift */,
+				8B035044241B428000D74895 /* GDLabel.swift */,
+				8B035046241B4BDF00D74895 /* GDButton.swift */,
+			);
+			path = GD;
+			sourceTree = "<group>";
+		};
 		8B0B7E0C241200A000AD8FF9 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				8B4D2A8B2415D1DA003031DE /* extension.swift */,
+				8B03503A241B377900D74895 /* protocol.swift */,
+				8B035048241B4E1100D74895 /* optionSet.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -194,6 +233,9 @@
 				8BB2FB0124130464001CEA00 /* BZBaseCell.swift */,
 				8B4D2A882415D08C003031DE /* BZGradientLayer.swift */,
 				8B4D2A8D2415D548003031DE /* BZLabel.swift */,
+				8BDCCB2C2416D11100670995 /* BZButton.swift */,
+				8B5D28A32416D4FE0076A9CB /* BZCollectionView.swift */,
+				8B03503F241B3AF600D74895 /* GD */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -212,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				8B6061692411F0AF0055D4EE /* MeController.swift */,
+				8B03503C241B38D300D74895 /* getItDone */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -292,6 +335,8 @@
 				8B0FCB48241307EB005D862E /* ArtCell.swift in Sources */,
 				8B5771192411D3FF005EA86D /* AppDelegate.swift in Sources */,
 				8B60616A2411F0AF0055D4EE /* MeController.swift in Sources */,
+				8B035041241B3B1600D74895 /* GDGradient.swift in Sources */,
+				8B035049241B4E1100D74895 /* optionSet.swift in Sources */,
 				8B1532BF2413F91400112AEA /* MeBarItemsView.swift in Sources */,
 				8B0FCB4C24130851005D862E /* FamilyEventsCell.swift in Sources */,
 				8B57711B2411D3FF005EA86D /* SceneDelegate.swift in Sources */,
@@ -299,15 +344,22 @@
 				8B1532C62414316A00112AEA /* MeCollectionCell.swift in Sources */,
 				8B0FCB46241307BB005D862E /* ConcertCell.swift in Sources */,
 				8BC7DA022412F3BE0025D2A5 /* FeedCell.swift in Sources */,
+				8B03503B241B377900D74895 /* protocol.swift in Sources */,
 				8B0FCB4A2413081B005D862E /* TheatreCell.swift in Sources */,
 				8B6061682411EDBB0055D4EE /* HomeController.swift in Sources */,
 				8BB2FB0224130464001CEA00 /* BZBaseCell.swift in Sources */,
 				8B4D2A892415D08C003031DE /* BZGradientLayer.swift in Sources */,
 				8B6061662411EB3F0055D4EE /* TabBarController.swift in Sources */,
 				8B4D2A8C2415D1DA003031DE /* extension.swift in Sources */,
+				8B035045241B428000D74895 /* GDLabel.swift in Sources */,
+				8BDCCB2D2416D11100670995 /* BZButton.swift in Sources */,
 				8B1532C324142E6E00112AEA /* MeSelectiveSection.swift in Sources */,
+				8B035047241B4BDF00D74895 /* GDButton.swift in Sources */,
 				8B1532CA241453EF00112AEA /* MeFeedCell.swift in Sources */,
+				8B5D28A42416D4FE0076A9CB /* BZCollectionView.swift in Sources */,
+				8B035043241B407200D74895 /* GDWelcomeView.swift in Sources */,
 				8B5771302411E259005EA86D /* ClassfieldsController.swift in Sources */,
+				8B03503E241B394C00D74895 /* WelcomeController.swift in Sources */,
 				8B1532C1241423BF00112AEA /* MeSelectiveItemView.swift in Sources */,
 				8BC7D9FF2412DAC50025D2A5 /* EeventItemsCell.swift in Sources */,
 				8B0B7E11241201C500AD8FF9 /* EventBarItemViews.swift in Sources */,

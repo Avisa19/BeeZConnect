@@ -4,7 +4,7 @@ import UIKit
 
 class BZLabel: UILabel {
     
-    init(title: String = "Default text", textColor: UIColor = UIColor.honeyZero, textAlign: NSTextAlignment = .left, size: CGFloat = 16, frame: CGRect = .zero) {
+    init(title: String = "Default text", textColor: UIColor = UIColor.honeyTextZero, textAlign: NSTextAlignment = .left, size: CGFloat = 16, frame: CGRect = .zero) {
         super.init(frame: .zero)
         if frame == .zero {
             self.translatesAutoresizingMaskIntoConstraints = false

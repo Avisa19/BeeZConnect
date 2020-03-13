@@ -19,14 +19,7 @@ class MeCollectionCell: BZBaseCell {
         }
     }
     
-    fileprivate let label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1)
-        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        label.textAlignment = .left
-        return label
-    }()
+    fileprivate let label = BZLabel(textColor: UIColor.honeyTextThree, size: 14)
     
     fileprivate let iconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -46,8 +39,8 @@ class MeCollectionCell: BZBaseCell {
     
     override var isSelected: Bool {
         didSet {
-            iconImageView.tintColor = isSelected ? #colorLiteral(red: 0.6597153544, green: 0.6040559411, blue: 0.5004613996, alpha: 1) : #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1)
-            label.textColor = isSelected ? #colorLiteral(red: 0.6597153544, green: 0.6040559411, blue: 0.5004613996, alpha: 1) : #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1)
+            iconImageView.tintColor = isSelected ?  #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1) : #colorLiteral(red: 0.6597153544, green: 0.6040559411, blue: 0.5004613996, alpha: 1)
+            label.textColor = isSelected ? #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1) : #colorLiteral(red: 0.6597153544, green: 0.6040559411, blue: 0.5004613996, alpha: 1)
         }
     }
     
