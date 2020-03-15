@@ -7,7 +7,7 @@ class GDHeaderView: UIView {
     var delegate: GDPopupMenuDelegate?
     
     fileprivate let bg = GDGradientView()
-    fileprivate let titleLabel = GDLabel(size: 14)
+    fileprivate let titleLabel = GDLabel(size: 18)
     fileprivate let subTitleLabel = GDLabel(size: 24)
     fileprivate let addButton = GDButton(title: "+", type: .roundedText, size: 24, cornerRadius: 0)
     var itemLeft: Int = 0 {

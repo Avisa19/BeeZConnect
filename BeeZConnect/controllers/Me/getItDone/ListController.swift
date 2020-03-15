@@ -23,13 +23,16 @@ class ListController: UIViewController, GDPopupMenuDelegate, GDNewItemDelegate {
     }
     
     func addItemToList(_ text: String) {
-        let newItem = ToDo(id: self.listData.count + 1, title: text, status: false)
-        self.listData.append(newItem)
-        tableList.reloadData()
-        self.popup.textField.text = ""
-        self.popup.animatePopupView()
+        if (notInList(text)) {
+            let newItem = ToDo(id: self.listData.count + 1, title: text, status: false)
+            self.listData.append(newItem)
+            tableList.reloadData()
+            self.updateItemHeaderLeft()
+            self.popup.textField.text = ""
+            self.popup.animatePopupView()
+        }
     }
-   
+    
     func didOpenPopupMenu() {
         popup.animatePopupView()
     }
@@ -42,7 +45,7 @@ class ListController: UIViewController, GDPopupMenuDelegate, GDNewItemDelegate {
     }
     
     fileprivate let insets: CGFloat = 20
-    fileprivate let headerView = GDHeaderView(cornerRadius: 4)
+    fileprivate let headerView = GDHeaderView(title: "stuff to get done", subTitle: "4 Left", cornerRadius: 4)
     fileprivate let bg = GDGradientView(cornerRadius: 16)
     fileprivate let tableList = GDTableView()
     fileprivate let LISTCELL_ID = "listCellID"
@@ -62,6 +65,7 @@ class ListController: UIViewController, GDPopupMenuDelegate, GDNewItemDelegate {
         view.backgroundColor = .white
         setupUI()
         claculateKeyboardHeight()
+        self.updateItemHeaderLeft()
         popup.animatePopupView()
     }
     
@@ -73,7 +77,6 @@ class ListController: UIViewController, GDPopupMenuDelegate, GDNewItemDelegate {
         if let userInfo = notification.userInfo {
             if let keyboardSize = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size {
                 self.keyboardHeight = keyboardSize.height
-                print(self.keyboardHeight)
             }
         }
     }
@@ -131,17 +134,52 @@ extension ListController: UITableViewDataSource, UITableViewDelegate, GDListCell
         }
         self.listData = newListData
         self.tableList.reloadData()
+        self.updateItemHeaderLeft()
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let titleHeader = GDLabel(frame: .init(x: 0, y: 0, width: view.frame.width, height: 44), textColor: .white, size: 18)
+        if section == 0 {
+            titleHeader.text = "ToDo"
+        } else if section == 1 {
+            titleHeader.text = "Done"
+        }
+        
+        return titleHeader
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 38
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listData.count
+        var count = 0
+        self.listData.forEach { (toDo) in
+            if (section == 0 && !toDo.status) {
+                count += 1
+            } else if (section == 1 && toDo.status) {
+                count += 1
+            }
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LISTCELL_ID, for: indexPath) as! GDListTableCell
         cell.delegate = self
         cell.textField.delegate = self
-        cell.toDo = self.listData[indexPath.row]
+        var itemForEachSection: [ToDo] = []
+        self.listData.forEach { (toDo) in
+            if (indexPath.section == 0 && !toDo.status) {
+                itemForEachSection.append(toDo)
+            } else if (indexPath.section == 1 && toDo.status) {
+                itemForEachSection.append(toDo)
+            }
+        }
+        cell.toDo = itemForEachSection[indexPath.row]
         return cell
     }
     

@@ -9,7 +9,7 @@ class GDNewItemPopupView: GDGradientView {
     fileprivate let cancelButton = GDButton(title: "   cancel   ", type: .roundedText, size: 16, cornerRadius: 4)
     fileprivate let addButton = GDButton(title: "  add  ", type: .roundedText, size: 16, cornerRadius: 4)
     let textField = GDTextField(placeholder: "Buy a frame from IKEA", leftInset: 8)
-    fileprivate var popupLocation: CGFloat = 80
+    fileprivate var popupLocation: CGFloat = 90
     
     @objc fileprivate func handleCancel() {
         textField.resignFirstResponder()
@@ -26,10 +26,10 @@ class GDNewItemPopupView: GDGradientView {
         
         textField.resignFirstResponder()
         self.animateView(transform: CGAffineTransform(translationX: 0, y: self.popupLocation), duration: 0.3)
-        if popupLocation == 80 {
+        if popupLocation == 90 {
             popupLocation = 0
         } else {
-            popupLocation = 80
+            popupLocation = 90
         }
     }
     
