@@ -28,7 +28,8 @@ class GDButton: UIButton {
         switch type {
         case .roundedText:
             roundedText()
-        case .squaredIcon: break
+        case .squaredIcon:
+            squaredText()
         default:
             break
         }
@@ -37,6 +38,10 @@ class GDButton: UIButton {
     fileprivate func roundedText() {
         self.setTitle(self.title, for: .normal)
         self.setTitleColor(UIColor.gdTextGreen, for: .normal)
+    }
+    
+    fileprivate func squaredText() {
+        self.layer.cornerRadius = 0
     }
     
     required init?(coder: NSCoder) {

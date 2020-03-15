@@ -14,6 +14,8 @@ class BZButton: UIButton {
     func phaseTwo() {
         self.setImage(image, for: .normal)
         self.imageView?.image?.withRenderingMode(.alwaysTemplate)
+        self.imageView?.contentMode = .scaleAspectFit
+        self.imageView?.clipsToBounds = true
         self.imageView?.tintColor = UIColor.honeyTextOne
     }
     

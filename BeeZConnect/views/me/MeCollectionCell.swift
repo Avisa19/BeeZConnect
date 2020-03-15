@@ -21,21 +21,8 @@ class MeCollectionCell: BZBaseCell {
     
     fileprivate let label = BZLabel(textColor: UIColor.honeyTextThree, size: 14)
     
-    fileprivate let iconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        imageView.tintColor = #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
+    fileprivate let iconImageView = BZImageView(tintColor: .honeyTextThree)
     
-    override var isHighlighted: Bool {
-        didSet {
-            iconImageView.tintColor = isHighlighted ? #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1) : #colorLiteral(red: 0.6597153544, green: 0.6040559411, blue: 0.5004613996, alpha: 1)
-            label.textColor = isHighlighted ? #colorLiteral(red: 0.4308766425, green: 0.2761793137, blue: 0.09125658125, alpha: 1) : #colorLiteral(red: 0.6597153544, green: 0.6040559411, blue: 0.5004613996, alpha: 1)
-        }
-    }
     
     override var isSelected: Bool {
         didSet {
@@ -54,8 +41,6 @@ class MeCollectionCell: BZBaseCell {
         
         contentView.backgroundColor = #colorLiteral(red: 0.928184092, green: 0.7959498763, blue: 0.2721357346, alpha: 1)
         backgroundColor = #colorLiteral(red: 0.928184092, green: 0.7959498763, blue: 0.2721357346, alpha: 1)
-        iconImageView.widthAnchor.constraint(equalToConstant: 15).isActive = true
-        iconImageView.heightAnchor.constraint(equalToConstant: 15).isActive = true
         
         let stackView = UIStackView(arrangedSubviews: [iconImageView, label])
         contentView.addSubview(stackView)
@@ -73,6 +58,6 @@ class MeCollectionCell: BZBaseCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: .init(top: 4, left: 20, bottom: 4, right: 4))
+        contentView.frame = contentView.frame.inset(by: .init(top: 16, left: 20, bottom: 16, right: 4))
     }
 }

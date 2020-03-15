@@ -5,7 +5,7 @@ import UIKit
 
 class BZWelcomeScreenView: BZGradientLayer {
     
-    fileprivate let infoLabel = BZLabel(title: "WELCOME TO BeeZConnect",textColor: UIColor.honeyTextOne, textAlign: .center, size: 70)
+    fileprivate let infoLabel = BZLabel(title: "WELCOME TO BeeZConnect",textColor: UIColor.honeyTextOne, textAlign: .center, size: 100)
     
     fileprivate let copyRight = BZLabel(title: "© 2020 | Avisa", textColor: UIColor.honeyTextOne, textAlign: .center, size: 14)
     

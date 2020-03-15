@@ -8,10 +8,9 @@ class MeController: UIViewController {
     fileprivate let FOLLOW_ID = "FollowID"
     fileprivate let SAVED_ID = "SavedID"
     
-    fileprivate lazy var meBarButtonView: MeBarItemsView = {
+    fileprivate lazy var meBarButtonView: UIView = {
         let view = MeBarItemsView()
         view.delegate = self
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     

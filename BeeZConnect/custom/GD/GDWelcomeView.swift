@@ -12,7 +12,7 @@ class GDGradientWelcomeView: GDGradientView {
         return label
     }()
     
-    fileprivate let nextButton = GDButton(title: "START WINNING", type: .roundedText, size: 14)
+    let nextButton = GDButton(title: "START WINNING", type: .roundedText, size: 14)
     
     override func setupViews() {
         super.setupViews()

@@ -17,7 +17,6 @@ extension UIColor {
     
     convenience init(red: Int, green: Int, blue: Int) {
         self.init(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1.0)
-        
     }
     
     convenience init(rgb: Int) {
@@ -35,6 +34,12 @@ extension UIView {
         if self.frame == .zero {
             self.translatesAutoresizingMaskIntoConstraints = false
         }
+    }
+    
+    func animateView(transform: CGAffineTransform, duration: Double) {
+        UIView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.85, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.transform = transform
+        })
     }
 }
 

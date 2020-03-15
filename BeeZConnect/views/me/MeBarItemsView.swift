@@ -9,17 +9,28 @@ class MeBarItemsView: UIView {
     
     fileprivate let titleLabel = BZLabel(title: "Sign in with", textColor: UIColor.honeyTextOne, textAlign: .center, size: 14)
     
-    fileprivate lazy var facebookButton = BZButton(image: #imageLiteral(resourceName: "icons8-facebook_new_filled"))
+    fileprivate let insets: CGFloat = 20
     
-    fileprivate lazy var twitterButton = BZButton(image: #imageLiteral(resourceName: "icons8-twitter"))
+    fileprivate lazy var facebookButton: UIButton = {
+        let button = BZButton(image: #imageLiteral(resourceName: "icons8-facebook_new_filled"))
+        return button
+    }()
     
-    fileprivate lazy var googleButton = BZButton(image: #imageLiteral(resourceName: "icons8-google_plus_filled"))
+    fileprivate lazy var twitterButton: UIButton = {
+        let button = BZButton(image: #imageLiteral(resourceName: "icons8-twitter"))
+        return button
+    }()
+    
+    fileprivate lazy var googleButton: UIButton = {
+        let button = BZButton(image: #imageLiteral(resourceName: "icons8-google_plus_filled"))
+        return button
+    }()
     
     fileprivate lazy var settingButton = BZButton(image: #imageLiteral(resourceName: "icons8-frisbee_disk"))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        checkIfFrameZero()
         backgroundColor = #colorLiteral(red: 0.8397607207, green: 0.6014199257, blue: 0.2217980623, alpha: 1)
         setupUI()
     }
@@ -29,6 +40,9 @@ class MeBarItemsView: UIView {
         addSubview(titleLabel)
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 50).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        titleLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        titleLabel.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
         
         let stackView = UIStackView(arrangedSubviews: [facebookButton, twitterButton, googleButton])
         addSubview(stackView)
@@ -41,7 +55,6 @@ class MeBarItemsView: UIView {
         stackView.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         addSubview(settingButton)
-        settingButton.translatesAutoresizingMaskIntoConstraints = false
         settingButton.topAnchor.constraint(equalTo: topAnchor, constant: 30).isActive = true
         settingButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8).isActive = true
         settingButton.widthAnchor.constraint(equalToConstant: 44).isActive = true

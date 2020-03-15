@@ -41,6 +41,15 @@
 		8B6061662411EB3F0055D4EE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061652411EB3F0055D4EE /* TabBarController.swift */; };
 		8B6061682411EDBB0055D4EE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061672411EDBB0055D4EE /* HomeController.swift */; };
 		8B60616A2411F0AF0055D4EE /* MeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061692411F0AF0055D4EE /* MeController.swift */; };
+		8B79341A241BF3E500125759 /* BZImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793419241BF3E500125759 /* BZImageView.swift */; };
+		8B79341C241C076400125759 /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79341B241C076400125759 /* ListController.swift */; };
+		8B79341F241C085B00125759 /* GDHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79341E241C085B00125759 /* GDHeaderView.swift */; };
+		8B793421241C21A200125759 /* GGTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793420241C21A200125759 /* GGTableView.swift */; };
+		8B793423241C265300125759 /* GDListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793422241C265300125759 /* GDListTableCell.swift */; };
+		8B793425241C2EE500125759 /* GDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793424241C2EE500125759 /* GDTextField.swift */; };
+		8B793427241C352E00125759 /* GDCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793426241C352E00125759 /* GDCheckBox.swift */; };
+		8B793429241C3A3E00125759 /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793428241C3A3E00125759 /* toDo.swift */; };
+		8B79342B241C61F100125759 /* GDNewItemPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79342A241C61F100125759 /* GDNewItemPopupView.swift */; };
 		8BB2FB0224130464001CEA00 /* BZBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2FB0124130464001CEA00 /* BZBaseCell.swift */; };
 		8BC7D9FF2412DAC50025D2A5 /* EeventItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7D9FE2412DAC50025D2A5 /* EeventItemsCell.swift */; };
 		8BC7DA022412F3BE0025D2A5 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7DA012412F3BE0025D2A5 /* FeedCell.swift */; };
@@ -84,6 +93,15 @@
 		8B6061652411EB3F0055D4EE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8B6061672411EDBB0055D4EE /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8B6061692411F0AF0055D4EE /* MeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeController.swift; sourceTree = "<group>"; };
+		8B793419241BF3E500125759 /* BZImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZImageView.swift; sourceTree = "<group>"; };
+		8B79341B241C076400125759 /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		8B79341E241C085B00125759 /* GDHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDHeaderView.swift; sourceTree = "<group>"; };
+		8B793420241C21A200125759 /* GGTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GGTableView.swift; sourceTree = "<group>"; };
+		8B793422241C265300125759 /* GDListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDListTableCell.swift; sourceTree = "<group>"; };
+		8B793424241C2EE500125759 /* GDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTextField.swift; sourceTree = "<group>"; };
+		8B793426241C352E00125759 /* GDCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCheckBox.swift; sourceTree = "<group>"; };
+		8B793428241C3A3E00125759 /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
+		8B79342A241C61F100125759 /* GDNewItemPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDNewItemPopupView.swift; sourceTree = "<group>"; };
 		8BB2FB0124130464001CEA00 /* BZBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZBaseCell.swift; sourceTree = "<group>"; };
 		8BC7D9FE2412DAC50025D2A5 /* EeventItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EeventItemsCell.swift; sourceTree = "<group>"; };
 		8BC7DA012412F3BE0025D2A5 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -105,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				8B03503D241B394C00D74895 /* WelcomeController.swift */,
+				8B79341B241C076400125759 /* ListController.swift */,
 			);
 			path = getItDone;
 			sourceTree = "<group>";
@@ -116,6 +135,12 @@
 				8B035042241B407200D74895 /* GDWelcomeView.swift */,
 				8B035044241B428000D74895 /* GDLabel.swift */,
 				8B035046241B4BDF00D74895 /* GDButton.swift */,
+				8B79341E241C085B00125759 /* GDHeaderView.swift */,
+				8B793420241C21A200125759 /* GGTableView.swift */,
+				8B793422241C265300125759 /* GDListTableCell.swift */,
+				8B793424241C2EE500125759 /* GDTextField.swift */,
+				8B793426241C352E00125759 /* GDCheckBox.swift */,
+				8B79342A241C61F100125759 /* GDNewItemPopupView.swift */,
 			);
 			path = GD;
 			sourceTree = "<group>";
@@ -125,6 +150,7 @@
 			children = (
 				8B0B7E0D241200C300AD8FF9 /* ClassfieldsSections.swift */,
 				8B1532C224142E6E00112AEA /* MeSelectiveSection.swift */,
+				8B793428241C3A3E00125759 /* toDo.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -235,6 +261,7 @@
 				8B4D2A8D2415D548003031DE /* BZLabel.swift */,
 				8BDCCB2C2416D11100670995 /* BZButton.swift */,
 				8B5D28A32416D4FE0076A9CB /* BZCollectionView.swift */,
+				8B793419241BF3E500125759 /* BZImageView.swift */,
 				8B03503F241B3AF600D74895 /* GD */,
 			);
 			path = custom;
@@ -333,14 +360,20 @@
 			files = (
 				8B5771232411D3FF005EA86D /* BeeZConnect.xcdatamodeld in Sources */,
 				8B0FCB48241307EB005D862E /* ArtCell.swift in Sources */,
+				8B79341A241BF3E500125759 /* BZImageView.swift in Sources */,
+				8B793421241C21A200125759 /* GGTableView.swift in Sources */,
 				8B5771192411D3FF005EA86D /* AppDelegate.swift in Sources */,
 				8B60616A2411F0AF0055D4EE /* MeController.swift in Sources */,
+				8B793423241C265300125759 /* GDListTableCell.swift in Sources */,
 				8B035041241B3B1600D74895 /* GDGradient.swift in Sources */,
+				8B793425241C2EE500125759 /* GDTextField.swift in Sources */,
 				8B035049241B4E1100D74895 /* optionSet.swift in Sources */,
 				8B1532BF2413F91400112AEA /* MeBarItemsView.swift in Sources */,
 				8B0FCB4C24130851005D862E /* FamilyEventsCell.swift in Sources */,
+				8B793427241C352E00125759 /* GDCheckBox.swift in Sources */,
 				8B57711B2411D3FF005EA86D /* SceneDelegate.swift in Sources */,
 				8B4D2A8E2415D548003031DE /* BZLabel.swift in Sources */,
+				8B79341C241C076400125759 /* ListController.swift in Sources */,
 				8B1532C62414316A00112AEA /* MeCollectionCell.swift in Sources */,
 				8B0FCB46241307BB005D862E /* ConcertCell.swift in Sources */,
 				8BC7DA022412F3BE0025D2A5 /* FeedCell.swift in Sources */,
@@ -349,9 +382,12 @@
 				8B6061682411EDBB0055D4EE /* HomeController.swift in Sources */,
 				8BB2FB0224130464001CEA00 /* BZBaseCell.swift in Sources */,
 				8B4D2A892415D08C003031DE /* BZGradientLayer.swift in Sources */,
+				8B79341F241C085B00125759 /* GDHeaderView.swift in Sources */,
 				8B6061662411EB3F0055D4EE /* TabBarController.swift in Sources */,
 				8B4D2A8C2415D1DA003031DE /* extension.swift in Sources */,
+				8B793429241C3A3E00125759 /* toDo.swift in Sources */,
 				8B035045241B428000D74895 /* GDLabel.swift in Sources */,
+				8B79342B241C61F100125759 /* GDNewItemPopupView.swift in Sources */,
 				8BDCCB2D2416D11100670995 /* BZButton.swift in Sources */,
 				8B1532C324142E6E00112AEA /* MeSelectiveSection.swift in Sources */,
 				8B035047241B4BDF00D74895 /* GDButton.swift in Sources */,
