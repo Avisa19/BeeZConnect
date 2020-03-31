@@ -15,7 +15,7 @@ protocol GDPopupMenuDelegate {
 }
 
 protocol GDListCellDelegate {
-    func toggleBox(_ updatedToDo: ToDo)
+    func toggleBox()
 }
 
 protocol GDNewItemDelegate {

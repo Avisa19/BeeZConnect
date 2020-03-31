@@ -126,7 +126,11 @@ extension MeController: UICollectionViewDelegateFlowLayout {
 
 extension MeController: BZGetItDoneDelegate {
     func didAddNewVC() {
-        let welcomeVC = WelcomeController()
+        
+        let visitedController = UserDefaults.standard.bool(forKey: "welcome-controller-visited")
+        
+        let welcomeVC = visitedController ? ListController() : WelcomeController()
+        
         self.present(welcomeVC, animated: true, completion: nil)
     }
 }

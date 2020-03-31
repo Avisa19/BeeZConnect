@@ -24,8 +24,8 @@ class ListController: UIViewController, GDPopupMenuDelegate, GDNewItemDelegate {
     
     func addItemToList(_ text: String) {
         if (notInList(text)) {
-            let newItem = ToDo(id: self.listData.count + 1, title: text, status: false)
-            self.listData.append(newItem)
+            CoreDataManager.shared.createData(id: Double(listData.count), title: text, status: false)
+            self.listData = CoreDataManager.shared.fetchData()
             tableList.reloadData()
             self.updateItemHeaderLeft()
             self.popup.textField.text = ""
@@ -49,11 +49,8 @@ class ListController: UIViewController, GDPopupMenuDelegate, GDNewItemDelegate {
     fileprivate let bg = GDGradientView(cornerRadius: 16)
     fileprivate let tableList = GDTableView()
     fileprivate let LISTCELL_ID = "listCellID"
-    fileprivate var listData: [ToDo] = [
-        ToDo(id: 1, title: "Walmart", status: true),
-        ToDo(id: 2, title: "Costco", status: false),
-        ToDo(id: 3, title: "WholeFood", status: true)
-    ]
+    fileprivate var listData: [ToDo] = []
+    fileprivate var updatedToDo: ToDo?
     
     fileprivate let popup = GDNewItemPopupView()
     fileprivate var keyboardHeight: CGFloat = 333 // 346
@@ -67,6 +64,7 @@ class ListController: UIViewController, GDPopupMenuDelegate, GDNewItemDelegate {
         claculateKeyboardHeight()
         self.updateItemHeaderLeft()
         popup.animatePopupView()
+        self.listData = CoreDataManager.shared.fetchData()
     }
     
     fileprivate func claculateKeyboardHeight() {
@@ -96,7 +94,7 @@ class ListController: UIViewController, GDPopupMenuDelegate, GDNewItemDelegate {
         bg.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: insets).isActive = true
         bg.leftAnchor.constraint(equalTo: view.leftAnchor, constant: insets).isActive = true
         bg.rightAnchor.constraint(equalTo: view.rightAnchor, constant: insets * -1).isActive = true
-        bgBottom = bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120)
+        bgBottom = bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 110 * -1)
         bgBottom.isActive = true
         
         // tableList
@@ -122,6 +120,12 @@ class ListController: UIViewController, GDPopupMenuDelegate, GDNewItemDelegate {
 }
 
 extension ListController: UITableViewDataSource, UITableViewDelegate, GDListCellDelegate {
+    func toggleBox() {
+        self.listData = CoreDataManager.shared.fetchData()
+        self.tableList.reloadData()
+        self.updateItemHeaderLeft()
+    }
+    /*
     func toggleBox(_ updatedToDo: ToDo) {
         let newListData = self.listData.map { (oldToDo) -> ToDo in
             if oldToDo.id == updatedToDo.id {
@@ -136,6 +140,7 @@ extension ListController: UITableViewDataSource, UITableViewDelegate, GDListCell
         self.tableList.reloadData()
         self.updateItemHeaderLeft()
     }
+ */
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -202,18 +207,33 @@ extension ListController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.keyboardHeight = 333
-        self.bgBottom.constant = -keyboardHeight - 110
-        animateLayoutIfNeeded()
+        
+        var heightToAnimate = -keyboardHeight - 20
         if popup.textField == textField {
             popup.animateView(transform: CGAffineTransform(translationX: 0, y: -keyboardHeight), duration: 0.75)
+            heightToAnimate -= 110
+        } else {
+            self.updatedToDo = CoreDataManager.shared.fetchData(title: textField.text!)
         }
+        
+        self.bgBottom.constant = heightToAnimate
+        animateLayoutIfNeeded()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        self.bgBottom.constant = -110
-        animateLayoutIfNeeded()
+        
+        var heightToAnimate: CGFloat = -20
         if popup.textField == textField {
             popup.animateView(transform: CGAffineTransform(translationX: 0, y: 0), duration: 0.75)
+            heightToAnimate -= 110
+        } else {
+            if let updatedTodo = self.updatedToDo {
+                CoreDataManager.shared.deleteToDos(id: updatedTodo.id)
+                CoreDataManager.shared.createData(id: updatedTodo.id, title: textField.text!, status: updatedTodo.status)
+            }
         }
+        
+        self.bgBottom.constant = heightToAnimate
+        animateLayoutIfNeeded()
     }
 }

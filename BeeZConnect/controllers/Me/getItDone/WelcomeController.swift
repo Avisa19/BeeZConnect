@@ -10,9 +10,10 @@ class WelcomeController: UIViewController {
     }()
     
     fileprivate let copyRight = BZLabel(title: "© 2020 | Avisa", textColor: UIColor.honeyTextZero, textAlign: .center, size: 14)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UserDefaults.standard.set(true, forKey: "welcome-controller-visited")
         view.backgroundColor = .white
         setupViews()
     }

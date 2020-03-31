@@ -37,6 +37,9 @@
 		8B5771252411D401005EA86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B5771242411D401005EA86D /* Assets.xcassets */; };
 		8B5771282411D401005EA86D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B5771262411D401005EA86D /* LaunchScreen.storyboard */; };
 		8B5771302411E259005EA86D /* ClassfieldsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B57712F2411E259005EA86D /* ClassfieldsController.swift */; };
+		8B5AA4FD241F524D00465DD9 /* ToDo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5AA4FB241F524D00465DD9 /* ToDo+CoreDataClass.swift */; };
+		8B5AA4FE241F524D00465DD9 /* ToDo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5AA4FC241F524D00465DD9 /* ToDo+CoreDataProperties.swift */; };
+		8B5AA500241F529700465DD9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5AA4FF241F529700465DD9 /* CoreDataManager.swift */; };
 		8B5D28A42416D4FE0076A9CB /* BZCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5D28A32416D4FE0076A9CB /* BZCollectionView.swift */; };
 		8B6061662411EB3F0055D4EE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061652411EB3F0055D4EE /* TabBarController.swift */; };
 		8B6061682411EDBB0055D4EE /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6061672411EDBB0055D4EE /* HomeController.swift */; };
@@ -48,7 +51,6 @@
 		8B793423241C265300125759 /* GDListTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793422241C265300125759 /* GDListTableCell.swift */; };
 		8B793425241C2EE500125759 /* GDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793424241C2EE500125759 /* GDTextField.swift */; };
 		8B793427241C352E00125759 /* GDCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793426241C352E00125759 /* GDCheckBox.swift */; };
-		8B793429241C3A3E00125759 /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B793428241C3A3E00125759 /* toDo.swift */; };
 		8B79342B241C61F100125759 /* GDNewItemPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79342A241C61F100125759 /* GDNewItemPopupView.swift */; };
 		8BB2FB0224130464001CEA00 /* BZBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2FB0124130464001CEA00 /* BZBaseCell.swift */; };
 		8BC7D9FF2412DAC50025D2A5 /* EeventItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC7D9FE2412DAC50025D2A5 /* EeventItemsCell.swift */; };
@@ -89,6 +91,9 @@
 		8B5771272411D401005EA86D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B5771292411D401005EA86D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B57712F2411E259005EA86D /* ClassfieldsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassfieldsController.swift; sourceTree = "<group>"; };
+		8B5AA4FB241F524D00465DD9 /* ToDo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDo+CoreDataClass.swift"; path = "BeeZConnect/DataModel/ToDo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B5AA4FC241F524D00465DD9 /* ToDo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ToDo+CoreDataProperties.swift"; path = "BeeZConnect/DataModel/ToDo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8B5AA4FF241F529700465DD9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		8B5D28A32416D4FE0076A9CB /* BZCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZCollectionView.swift; sourceTree = "<group>"; };
 		8B6061652411EB3F0055D4EE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8B6061672411EDBB0055D4EE /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -100,7 +105,6 @@
 		8B793422241C265300125759 /* GDListTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDListTableCell.swift; sourceTree = "<group>"; };
 		8B793424241C2EE500125759 /* GDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTextField.swift; sourceTree = "<group>"; };
 		8B793426241C352E00125759 /* GDCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCheckBox.swift; sourceTree = "<group>"; };
-		8B793428241C3A3E00125759 /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
 		8B79342A241C61F100125759 /* GDNewItemPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDNewItemPopupView.swift; sourceTree = "<group>"; };
 		8BB2FB0124130464001CEA00 /* BZBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BZBaseCell.swift; sourceTree = "<group>"; };
 		8BC7D9FE2412DAC50025D2A5 /* EeventItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EeventItemsCell.swift; sourceTree = "<group>"; };
@@ -150,7 +154,7 @@
 			children = (
 				8B0B7E0D241200C300AD8FF9 /* ClassfieldsSections.swift */,
 				8B1532C224142E6E00112AEA /* MeSelectiveSection.swift */,
-				8B793428241C3A3E00125759 /* toDo.swift */,
+				8B5AA4FF241F529700465DD9 /* CoreDataManager.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -198,6 +202,8 @@
 		8B57710C2411D3FF005EA86D = {
 			isa = PBXGroup;
 			children = (
+				8B5AA4FB241F524D00465DD9 /* ToDo+CoreDataClass.swift */,
+				8B5AA4FC241F524D00465DD9 /* ToDo+CoreDataProperties.swift */,
 				8B5771172411D3FF005EA86D /* BeeZConnect */,
 				8B5771162411D3FF005EA86D /* Products */,
 			);
@@ -363,6 +369,7 @@
 				8B79341A241BF3E500125759 /* BZImageView.swift in Sources */,
 				8B793421241C21A200125759 /* GGTableView.swift in Sources */,
 				8B5771192411D3FF005EA86D /* AppDelegate.swift in Sources */,
+				8B5AA4FD241F524D00465DD9 /* ToDo+CoreDataClass.swift in Sources */,
 				8B60616A2411F0AF0055D4EE /* MeController.swift in Sources */,
 				8B793423241C265300125759 /* GDListTableCell.swift in Sources */,
 				8B035041241B3B1600D74895 /* GDGradient.swift in Sources */,
@@ -385,11 +392,12 @@
 				8B79341F241C085B00125759 /* GDHeaderView.swift in Sources */,
 				8B6061662411EB3F0055D4EE /* TabBarController.swift in Sources */,
 				8B4D2A8C2415D1DA003031DE /* extension.swift in Sources */,
-				8B793429241C3A3E00125759 /* toDo.swift in Sources */,
 				8B035045241B428000D74895 /* GDLabel.swift in Sources */,
 				8B79342B241C61F100125759 /* GDNewItemPopupView.swift in Sources */,
 				8BDCCB2D2416D11100670995 /* BZButton.swift in Sources */,
 				8B1532C324142E6E00112AEA /* MeSelectiveSection.swift in Sources */,
+				8B5AA4FE241F524D00465DD9 /* ToDo+CoreDataProperties.swift in Sources */,
+				8B5AA500241F529700465DD9 /* CoreDataManager.swift in Sources */,
 				8B035047241B4BDF00D74895 /* GDButton.swift in Sources */,
 				8B1532CA241453EF00112AEA /* MeFeedCell.swift in Sources */,
 				8B5D28A42416D4FE0076A9CB /* BZCollectionView.swift in Sources */,

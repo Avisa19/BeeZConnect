@@ -10,15 +10,15 @@ class GDListTableCell: UITableViewCell {
         didSet {
             guard let toDo = toDo else { return }
                 textField.text = toDo.title
-                box.id = toDo.id
                 box.isToggled = toDo.status
         }
     }
     
     @objc fileprivate func handleBoxStatus() {
         if let delegate = self.delegate, let textFieldText = textField.text, let toDo = self.toDo {
-            let newToDo = ToDo(id: toDo.id, title: textFieldText, status: !toDo.status)
-            delegate.toggleBox(newToDo)
+            CoreDataManager.shared.deleteToDos(id: toDo.id)
+            CoreDataManager.shared.createData(id: toDo.id, title: textFieldText, status: !toDo.status)
+            delegate.toggleBox()
         }
     }
     
