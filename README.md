@@ -4,7 +4,7 @@
 
 ### Also I add Core Data, for TODO list, Whenever add new item, will be stored.
 
-> Code a Swift iOS To Do List App, UIKit, CoreData, Table View
+> To Do List App, UIKit, CoreData, Table View
 
 
 ![4853zm](https://user-images.githubusercontent.com/46062128/87337536-71e52e80-c4f8-11ea-95ec-266ea219d6f5.gif)
